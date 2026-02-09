@@ -1,5 +1,54 @@
 # C++ Learning Log
 
+## 📅 2026-02-09  
+### ⏱ Session Length  
+~45–60 minutes  
+
+### 🎯 Focus  
+- Designing a modular number guessing game  
+- Separating responsibilities between `main()` and helper functions  
+- Understanding data flow between functions  
+- Thinking structurally before writing implementation  
+
+### 🧠 Key Concepts Learned  
+- `main()` should orchestrate program flow, not contain heavy logic  
+- Functions should have **clear responsibility** (single-purpose design)  
+- Data should move intentionally between functions using parameters and return values  
+- Avoid unnecessary functions if logic can live cleanly in control flow  
+- A function like `guessing(int maxRange)` can:
+  - Generate a random number within range  
+  - Loop until the correct guess  
+  - Count attempts  
+  - Return the attempt count  
+
+#### Control Structure Concept
+main()
+→ choose difficulty (range)
+→ call guessing(range)
+→ receive attempts
+→ increase difficulty
+→ repeat
+
+
+### ❓ Questions / Confusion  
+- Should `difficulty()` be its own function or live inside `main()`?  
+- When does modularization become over-engineering?  
+- What data truly belongs inside each function?  
+
+### 💡 Breakthroughs  
+- Architecture is about **clear information flow**, not maximizing the number of functions  
+- `guessing()` should not call `main()`  
+- Functions should not “know” about game progression — only handle their specific responsibility  
+- Began thinking in terms of **ownership of game state**  
+
+### ➡️ Next Session Goals  
+- Fully implement `guessing(int maxRange)`  
+- Add proper random number generation  
+- Add input validation for non-numeric input  
+- Experiment with returning different values (attempt count vs. success boolean)  
+- Consider refactoring into a `struct` later for level + score tracking  
+
+---
 ## 📅 2026-01-23
 ### ⏱ Session Length
 ~15 minutes

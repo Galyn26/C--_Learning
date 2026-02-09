@@ -1,29 +1,35 @@
-//Title: Game	Number Guessing	
-//Description: Write a program that generates a random number between 1 and 100 and asks the user to guess the number. 
-//Provide feedback to the user (e.g., "Too high" or "Too low") until they guess the correct number.	
+// Create a number guessing game with difficulty levels and score tracking
+
+/*
+The plan is to create 5 levels of difficulty and there will be a "prize" for each 
+level completed.
+IDK what the prize is yet I'll figure it out
+but I do know that all the main should do is call the guessing function
+then I'll have a difficult function
+then call both in main
+oh yeah, and a prize function
+so it should loop you in the level state until you guess the number
+LV1 = 1 - 10
+LV2 = 1 - 50
+LV3 = 1 - 100
+LV4 = 1 - 500
+LV5 = 1 - 1000
+The score tracker should also be another function that takes the string output 
+for every "wrong answer" and counts the amount of times it took to guess right
+*/
 
 #include <iostream>
-#include <cmath>
+#include <string>
 
 int main () {
-    int numberToGuess = rand() % 100 + 1; // Generate random number between 1 and 100
-    int userGuess = 0;
 
-    std::cout << "Welcome to the Number Guessing Game!" << std::endl;
-    std::cout << "I have selected a number between 1 and 100. Can you guess it?" << std::endl;
-
-    while (userGuess != numberToGuess) {
-        std::cout << "Enter your guess: ";
-        std::cin >> userGuess;
-
-        if (userGuess < numberToGuess) {
-            std::cout << "Too low! Try again." << std::endl;
-        } else if (userGuess > numberToGuess) {
-            std::cout << "Too high! Try again." << std::endl;
-        } else {
-            std::cout << "Congratulations! You've guessed the correct number: " << numberToGuess << std::endl;
-        }
-    }
-
-    return 0;
 }
+
+int guessing () {
+
+}
+
+int guessing (int maxRange) {
+
+}
+
